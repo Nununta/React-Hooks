@@ -1,13 +1,33 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+// import logo from './logo.svg';
 import './App.css';
 
 const App = props => {
     const[state, setState] = useState(props); 
-
     const reset = () => {
       setState(props);
     }
+
+    useEffect(()=>{
+      console.log('useEffect');
+      //Domがレンダリングするたびに呼ばれる。
+    })
+
+    useEffect(()=>{
+      console.log('useEffect firstonly');
+      //Domがレンダリングされた一回のみ呼ばれる。
+    },[])
+
+    useEffect(()=>{
+      console.log('useEffect nameChangeonly');
+      //nameがレンダリングされた一回のみ呼ばれる。
+    },[state.name])
+
+    // const renderPeriod = () => {
+    //   console.log('render period');
+    //   return '。';
+    // }
+
   return (
     <React.Fragment>
       <p>現在の{state.name}は{state.price}円です。</p>
