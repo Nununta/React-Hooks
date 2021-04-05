@@ -11,13 +11,14 @@ const App = () => {
 
   const addEvent = e => {
     e.preventDefault() //リロード防止
-    console.log({title},{body});
+    // console.log({title},{body});
     dispatch({
       type: 'CREATE_EVENT',
       title,
       body
-    }
-    )
+    })
+    setTitle('')
+    setBody('')
   }
 
   // console.log({state});
