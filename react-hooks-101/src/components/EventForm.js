@@ -55,7 +55,7 @@ return(
             <label htmlFor="EventBody">ボディー</label>
             <textarea className="form-control" id="EventBody" value={body} onChange={e => setBody(e.target.value)} />
             <button className="btn btn-primary" onClick={addEvent} disabled={Uncreatable} >イベント作成</button>
-            <button className="btn btn-danger" onClick={deleteAllEvents} disabled={state.length === 0}>全てのイベント削除する</button>
+            <button className="btn btn-danger" onClick={deleteAllEvents} disabled={state.events.length === 0}>全てのイベント削除する</button>
         </div>
     </form>
 </>
