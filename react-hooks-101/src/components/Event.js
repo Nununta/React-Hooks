@@ -9,7 +9,7 @@ import {timeCurrentIso8601} from '../utils'
 
 
 const Event = ({event}) => {
-      const {state,dispatch} = useContext(AppContext)
+      const {dispatch} = useContext(AppContext)
       const handleClickDelete = () => {
         const result = window.confirm(`イベント(id=${event.id})を削除しても良いですか❓`)
         if(result) {
