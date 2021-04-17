@@ -9,7 +9,8 @@ import AppContext from '../contexts/AppContext'
 
 const App = () => {
   const inititialState = {
-    events: []
+    events: [],
+    operationLogs: []
   }
   const [state, dispatch] = useReducer(reducer,inititialState)
 
